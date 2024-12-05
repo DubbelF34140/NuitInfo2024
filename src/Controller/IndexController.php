@@ -16,6 +16,14 @@ class IndexController extends AbstractController
         ]);
     }
 
+    #[Route('/captchat', name: 'captchat')]
+    public function captchat(): Response
+    {
+        return $this->render('index/captchat.html.twig', [
+            'controller_name' => 'IndexController',
+        ]);
+    }
+
     #[Route('/theme1', name: 'theme1')]
     public function them1(): Response
     {
