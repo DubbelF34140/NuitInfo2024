@@ -1,38 +1,82 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L’Océan en Santé : Un Corps Menacé</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ asset('styles/thematique3.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/bull.css') }}">
+</head>
+<body>
+{% include 'index/navigation.html.twig' %}
+<!-- Bloc 1 : Introduction -->
+<section class="intro-section">
+    <div class="container">
+        <h1 class="title">L’Océan en Santé : Un Corps Menacé</h1>
+        <p class="description">
+            Tout comme le cœur humain peut être affecté par des maladies cardiovasculaires, l’océan subit des perturbations critiques dues à la pollution, au réchauffement climatique, et à l’acidification. Ces menaces compromettent non seulement la santé des écosystèmes marins mais aussi celle de toute la planète.
+        </p>
+    </div>
+</section>
 
-{% block title %}Et si l'océan était un corps humain ?{% endblock %}
+<!-- Bloc 2 : Pollution marine et ses impacts -->
+<section class="alternate-section">
+    <div class="text-content">
+        <h2 class="subtitle">La pollution marine : Le cholestérol de l’océan</h2>
+        <p class="description">
+            La pollution plastique agit comme une accumulation toxique, semblable au cholestérol dans les artères humaines. Ces déchets bloquent les flux naturels dans l’océan, affectant la biodiversité et les chaînes alimentaires, tout comme un blocage artériel met en danger la circulation sanguine.
+        </p>
+    </div>
+    <div class="image-content">
+        <img src="https://www.opnminded.com/wp-content/uploads/2017/11/plastique-05-optimized.jpg" alt="Pollution plastique dans l'océan">
+    </div>
+</section>
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-{% endblock %}
-{% block body %}
-    <header>
-        <h1>Et si l'océan était un corps humain ?</h1>
-        <p>Explorez les parallèles fascinants entre les systèmes océaniques et le corps humain.</p>
-    </header>
-    <main id="ocean">
-        {% block content %}
-                <section>
-                    <h2>Thématique 1 : L’Océan, le Cœur Battant de la Planète</h2>
-                    <p>Découvrez comment les courants marins fonctionnent comme le système circulatoire du corps humain, distribuant chaleur et nutriments à travers la planète.</p>
-                </section>
-                <section>
-                    <h2>Thématique 2 : Les Poumons Bleus de la Terre</h2>
-                    <p>Apprenez comment le phytoplancton joue un rôle essentiel dans la production d’oxygène, tout comme les poumons filtrent l'air pour fournir l’oxygène nécessaire au corps humain.</p>
-                </section>
-                <section>
-                    <h2>Thématique 3 : L’Océan en Santé : Un Corps Menacé</h2>
-                    <p>Examinez les menaces telles que la pollution et le réchauffement climatique qui affectent l'équilibre océanique et, par conséquent, l'équilibre climatique global.</p>
-                </section>
-                <section>
-                    <h2>Thématique 4 : Réparer le Cœur de la Planète</h2>
-                    <p>Découvrez les actions que nous pouvons entreprendre pour restaurer la santé des océans et préserver leur rôle essentiel dans notre survie.</p>
-                </section>
-        {% endblock %}
-    </main>
-    <footer>
-        <p>&copy; Nuit de l'Info 2024 - Créé avec passion pour sensibiliser sur l'importance des océans.</p>
-    </footer>
-    <script src="{{ asset('script/index.js') }}"></script>
-{% endblock %}
+<!-- Bloc 3 : Réchauffement des océans -->
+<section class="alternate-section">
+    <div class="image-content">
+        <img src="https://cdn.statcdn.com/Infographic/images/normal/17373.jpeg" alt="Réchauffement des océans">
+    </div>
+    <div class="text-content">
+        <h2 class="subtitle">Le réchauffement des océans : Une fièvre planétaire</h2>
+        <p class="description">
+            L’augmentation des températures océaniques, due au changement climatique, ressemble à une fièvre dans le corps humain. Cela entraîne des phénomènes tels que le blanchissement des coraux, la prolifération d’algues toxiques, et des impacts sur les écosystèmes marins.
+        </p>
+    </div>
+</section>
+
+<!-- Bloc 4 : Acidification des océans -->
+<section class="alternate-section">
+    <div class="text-content">
+        <h2 class="subtitle">Acidification : Un déséquilibre métabolique</h2>
+        <p class="description">
+            L’acidification des océans, provoquée par l’absorption excessive de CO₂, déséquilibre le "métabolisme" de l’océan, affectant des espèces clés comme les coraux et les coquillages. Ce processus peut être comparé aux troubles métaboliques qui affaiblissent les fonctions vitales du corps humain.
+        </p>
+    </div>
+    <div class="image-content">
+        <img src="https://i0.wp.com/ocean-climate.org/wp-content/uploads/2015/03/acidification-des-oceans.png?w=847&ssl=1" alt="Acidification des océans">
+    </div>
+</section>
+
+<!-- Bloc 5 : Appel à l’action -->
+<section class="call-to-action-section">
+    <div class="container">
+        <h2 class="cta-title">Rétablissons la santé de l’océan</h2>
+        <p class="cta-description">
+            La santé de l’océan et celle de l’humanité sont profondément liées. Réduisons notre empreinte écologique en limitant les émissions de CO₂, en luttant contre la pollution plastique, et en soutenant les initiatives pour protéger les écosystèmes marins.
+        </p>
+        <a href="https://www.oceanprotect.org/">
+            <button class="cta-button">Agir pour les océans</button>
+        </a>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 - Nuit de l’Info | Projet : Et si l’océan était un corps humain ?</p>
+    </div>
+</footer>
+<script src="{{ asset('script/bull.js') }}"></script>
+</body>
+</html>
