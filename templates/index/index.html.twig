@@ -1,20 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello IndexController!{% endblock %}
+{% block title %}Et si l'océan était un corps humain ?{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/Users/ylanwoelffle/PhpstormProjects/NuitInfo2024/src/Controller/IndexController.php</code></li>
-        <li>Your template at <code>/Users/ylanwoelffle/PhpstormProjects/NuitInfo2024/templates/index/index.html.twig</code></li>
-    </ul>
-</div>
+    <header>
+        <h1>Et si l'océan était un corps humain ?</h1>
+        <p>Explorez les parallèles fascinants entre les systèmes océaniques et le corps humain.</p>
+    </header>
+    <main id="ocean">
+        {% block content %}
+                <section>
+                    <h2>Thématique 1 : L’Océan, le Cœur Battant de la Planète</h2>
+                    <p>Découvrez comment les courants marins fonctionnent comme le système circulatoire du corps humain, distribuant chaleur et nutriments à travers la planète.</p>
+                </section>
+                <section>
+                    <h2>Thématique 2 : Les Poumons Bleus de la Terre</h2>
+                    <p>Apprenez comment le phytoplancton joue un rôle essentiel dans la production d’oxygène, tout comme les poumons filtrent l'air pour fournir l’oxygène nécessaire au corps humain.</p>
+                </section>
+                <section>
+                    <h2>Thématique 3 : L’Océan en Santé : Un Corps Menacé</h2>
+                    <p>Examinez les menaces telles que la pollution et le réchauffement climatique qui affectent l'équilibre océanique et, par conséquent, l'équilibre climatique global.</p>
+                </section>
+                <section>
+                    <h2>Thématique 4 : Réparer le Cœur de la Planète</h2>
+                    <p>Découvrez les actions que nous pouvons entreprendre pour restaurer la santé des océans et préserver leur rôle essentiel dans notre survie.</p>
+                </section>
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; Nuit de l'Info 2024 - Créé avec passion pour sensibiliser sur l'importance des océans.</p>
+    </footer>
+    <script src="{{ asset('script/index.js') }}"></script>
 {% endblock %}
