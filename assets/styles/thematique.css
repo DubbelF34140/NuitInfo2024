@@ -1,0 +1,74 @@
+body.theme-ocean {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #0077b6, #00b4d8);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #03045e;
+}
+
+.logo-heart {
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 2.5em;
+    margin: 0;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffdd00;
+    text-align: center;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0096c7;
+}
+
+.btn-ocean:hover {
+    background-color: #0077b6;
+}
+
+.footer {
+    background-color: #03045e;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.9em;
+    color: #aaa;
+}
