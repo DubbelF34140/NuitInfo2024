@@ -33,11 +33,10 @@ document.getElementById('arctic-ocean').addEventListener('click', () => {
 // Food chain
 
 const organisms = [
-    { id: "plankton", nextDelay: 3000 },
-    { id: "small-fish", nextDelay: 4000 },
-    { id: "medium-fish", nextDelay: 5000 },
+    { id: "plankton", nextDelay: 2000 },
+    { id: "medium-fish", nextDelay: 4000 },
     { id: "big-fish", nextDelay: 6000 },
-    { id: "predator", nextDelay: 7000 },
+    { id: "predator", nextDelay: 8000 },
 ];
 
 function resetOrganisms() {
