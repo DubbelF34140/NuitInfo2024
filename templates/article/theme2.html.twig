@@ -11,23 +11,20 @@
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
 {% endblock %}
 {% block body %}
-	<main id="ocean">
-		{% block content %}
+	{% include 'index/navigation.html.twig' %}
+	{% block content %}
+		<!-- Bloc 1 : Introduction -->
+		<section class="intro-section">
 			<div class="container">
-				<section class="intro-section">
-					<h1>Thématique 2 : Les Poumons Bleus de la Terre</h1>
-					<p>Apprenez comment le phytoplancton joue un rôle essentiel dans la production d’oxygène, tout comme les poumons filtrent l'air pour fournir l’oxygène nécessaire au corps humain.</p>
-				</section>
-				<section>
-					<h2>Les océans couvrent environ 71 % de la surface de notre planète et jouent un rôle vital dans la régulation du climat, le maintien de la biodiversité et le soutien aux communautés humaines et économiques.</h2>
-					<h2>Ce vaste réservoir de vie abrite des millions d'espèces, dont beaucoup restent à découvrir, et agit comme un immense puits de carbone, absorbant environ 30 % des émissions de dioxyde de carbone produites par l'activité humaine.</h2>
-					<h2>
-						Cependant, les océans sont aujourd'hui confrontés à des menaces sans précédent. La pollution plastique, en particulier, représente un défi majeur. Chaque année, plus de 8 millions de tonnes de plastique se déversent dans les mers, formant des gyres océaniques comme le tristement célèbre "continent de plastique" dans le Pacifique. Ces déchets mettent en péril la faune marine et affectent la santé humaine via la chaîne alimentaire.
-					</h2>
-				</section>
-				<section>
+				<h1 class="title">LES POUMONS BLEUS DE LA TERRE</h1>
+				<p class="description">Les océans jouent un rôle vital dans la régulation du climat, le maintien de la biodiversité et le soutien aux communautés humaines.</p>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="image-container">
 					<div class="image-container">
-						<img style="width:100%;" src=" {{ asset('World_map_with_nations.svg') }} " alt="Map">
+						<img src=" {{ asset('World_map_with_nations.svg') }} " alt="Map">
 						<div class="icon atlantic-ocean" id="atlantic-ocean"></div>
 						<div class="tooltip atlantic-ocean  " id="tooltip-atlantic">Océan Atlantique</div>
 						<div class="icon pacific-ocean" id="pacific-ocean"></div>
@@ -39,8 +36,12 @@
 						<div class="icon arctic-ocean" id="arctic-ocean"></div>
 						<div class="tooltip arctic-ocean  " id="tooltip-atlantic">Océan Arctique</div>
 					</div>
-				</section>
-				<section class="alternate-section" id="pacific-ocean-container">
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="grid-section" id="pacific-ocean-container">
 					<div>
 						<h2>OCÉAN PACIFIQUE</h2>
 					</div>
@@ -57,8 +58,8 @@
 							<li>Riche en biodiversité marine et îles tropicales</li>
 						</ul>
 					</div>
-				</section>
-				<section class="alternate-section" id="atlantic-ocean-container">
+				</div>
+				<div class="grid-section" id="atlantic-ocean-container">
 					<div>
 						<h2>OCÉAN ATLANTIQUE</h2>
 					</div>
@@ -75,8 +76,8 @@
 							<li>Courants marins importants comme le Gulf Stream</li>
 						</ul>
 					</div>
-				</section>
-				<section class="alternate-section" id="indian-ocean-container">
+				</div>
+				<div class="grid-section" id="indian-ocean-container">
 					<div>
 						<h2>OCÉAN INDIEN</h2>
 					</div>
@@ -93,8 +94,8 @@
 							<li>Joue un rôle crucial dans le commerce mondial</li>
 						</ul>
 					</div>
-				</section>
-				<section class="alternate-section" id="austral-ocean-container">
+				</div>
+				<div class="grid-section" id="austral-ocean-container">
 					<div>
 						<h2>OCÉAN AUSTRAL</h2>
 					</div>
@@ -111,8 +112,8 @@
 							<li>Clé dans la régulation de la température globale</li>
 						</ul>
 					</div>
-				</section>
-				<section class="alternate-section" id="arctic-ocean-container">
+				</div>
+				<div class="grid-section" id="arctic-ocean-container">
 					<div>
 						<h2>OCÉAN ARCTIQUE</h2>
 					</div>
@@ -129,7 +130,12 @@
 							<li>Habitat de l'ours polaire et de nombreuses espèces uniques</li>
 						</ul>
 					</div>
-				</section>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<h2>L'Océan, ce vaste réservoir de vie, abrite des millions d'espèces, dont beaucoup restent à découvrir, et agit comme un immense puits de carbone, absorbant environ 30 % des émissions de dioxyde de carbone produites par l'activité humaine.</h2>
 				<div class="container-foodchain">
 					<div id="foodchain">Le rôle crucial du plancton dans la chaîne alimentaire</div>
 					<div id="infos-foodchain">Le phytoplancton est consommé par le zooplancton, qui sert lui-même de nourriture à de plus gros organismes marins, jusqu'aux prédateurs de pointe comme les requins et les baleines.</div>
@@ -138,10 +144,15 @@
 					<img class="organism" id="big-fish" src="{{ asset('img/thon.png') }}" alt="Grand Poisson">
 					<img class="organism" id="predator" src="{{ asset('img/requin.png') }}" alt="Prédateur">
 				</div>
-
+				<h3>Cette capacité à enrichir l'air en oxygène est similaire à la fonction des poumons humains, qui permettent d'échanger de l'oxygène avec l'environnement. Le dioxygène et le dioxyde de carbonne sont des éléments cruciaux pour nous, être terrestres, et les océans.</h3>
 			</div>
-		{% endblock %}
-	</main>
+		</section>
+		<section>
+			<div class="container">
+				<h2>Cependant, les océans sont aujourd'hui confrontés à des menaces, particulièrement la pollution plastique. Chaque année, plus de 8 millions de tonnes de plastique se déversent dans les mers, formant des gyres océaniques comme le tristement célèbre "continent de plastique" dans le Pacifique. Ces déchets mettent en péril la faune marine et affectent la santé humaine via la chaîne alimentaire.</h2>
+			</div>
+		</section>
+	{% endblock %}
 	<footer>
 		<p>&copy; Nuit de l'Info 2024 - Créé avec passion pour sensibiliser sur l'importance des océans.</p>
 	</footer>

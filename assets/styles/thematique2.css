@@ -7,13 +7,6 @@ body {
     color: #ffffff;
 }
 
-/* Container central pour aligner le contenu */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
 /* Animation pour les sections */
 @keyframes fadeIn {
     from {
@@ -27,11 +20,48 @@ body {
     }
 }
 
+.title {
+    font-size: 2.5em;
+}
+
+/* Paragraphe descriptif */
+.description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
 section {
     padding: 50px 0;
 }
 
-.alternate-section {
+/* Section d'introduction */
+.intro-section {
+    background: rgb(0, 119, 190);
+    text-align: center;
+    animation-delay: 0.5s;
+}
+
+.grid-section {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% auto;
+    padding: 50px;
+}
+
+
+/* Container central pour aligner le contenu */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Images dynamiques */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    animation: float 6s ease-in-out infinite;
 }
