@@ -32,17 +32,26 @@ class IndexController extends AbstractController
         ]);
     }
 
-<<<<<<< HEAD
     #[Route('/theme2', name: 'theme2')]
     public function them2(): Response
     {
         return $this->render('article/theme2.html.twig', [
-=======
+            'controller_name' => 'IndexController',
+        ]);
+    }
+
     #[Route('/theme3', name: 'theme3')]
     public function them3(): Response
     {
         return $this->render('article/theme3.html.twig', [
->>>>>>> a0c0abf97eb11dc910fda638b4fb774d826b3a01
+            'controller_name' => 'IndexController',
+        ]);
+    }
+
+    #[Route('/theme4', name: 'theme3')]
+    public function them4(): Response
+    {
+        return $this->render('article/theme4.html.twig', [
             'controller_name' => 'IndexController',
         ]);
     }

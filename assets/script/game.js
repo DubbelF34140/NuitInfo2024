@@ -9,7 +9,6 @@
         fish: new Image(),
         devil: new Image(),
         star: new Image(),
-        portal: new Image(),
     };
 
     textures.ground.src = "sprite/ground-texture.png";
@@ -18,7 +17,6 @@
     textures.fish.src = "sprite/princess-sprite.png";
     textures.devil.src = "sprite/devil-sprite.png";
     textures.star.src = "sprite/star-sprite.png";
-    textures.portal.src = "sprite/portal-sprite.png";
 
     let mapSize = 10;
     const pixel = 40;
@@ -28,7 +26,6 @@
     let fishX = 8, fishY = 8;
     let devilX = 4, devilY = 5;
     let starX = 2, starY = 2;
-    let portal1 = { x: 3, y: 3 }, portal2 = { x: 6, y: 6 };
     let score = 0;
     let timeRemaining = 30;
 
@@ -68,8 +65,6 @@
         context.drawImage(textures.fish, fishX * pixel, fishY * pixel, pixel, pixel);
         context.drawImage(textures.devil, devilX * pixel, devilY * pixel, pixel, pixel);
         context.drawImage(textures.star, starX * pixel, starY * pixel, pixel, pixel);
-        context.drawImage(textures.portal, portal1.x * pixel, portal1.y * pixel, pixel, pixel);
-        context.drawImage(textures.portal, portal2.x * pixel, portal2.y * pixel, pixel, pixel);
     }
 
     function checkWin() {
@@ -90,16 +85,6 @@
             score += 10;
             starX = Math.floor(Math.random() * mapSize);
             starY = Math.floor(Math.random() * mapSize);
-        }
-    }
-
-    function checkPortal() {
-        if (catX === portal1.x && catY === portal1.y) {
-            catX = portal2.x;
-            catY = portal2.y;
-        } else if (catX === portal2.x && catY === portal2.y) {
-            catX = portal1.x;
-            catY = portal1.y;
         }
     }
 
@@ -141,7 +126,6 @@
         checkWin();
         checkLoose();
         checkStar();
-        checkPortal();
     }
 
     function drawGame() {
@@ -170,5 +154,5 @@
     textures.ground.onload = () => drawGame();
     drawGame();
 
-    setInterval(moveDevil, 3000);
+    setInterval(moveDevil, 1000);
 })();
