@@ -50,7 +50,6 @@ function resetOrganisms() {
 }
 
 function animateChain() {
-    console.log(organisms);
     resetOrganisms();
     organisms.forEach((organism, index) => {
         setTimeout(() => {
