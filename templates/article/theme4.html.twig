@@ -1,39 +1,97 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les innovations pour sauver les océans</title>
+    <link rel="stylesheet" href="{{ asset('styles/thematique4.css') }}">
+</head>
+<body>
+{% include 'index/navigation.html.twig' %}
 
-{% block title %}Et si l'océan était un corps humain ?{% endblock %}
+<!-- Bloc 1 : Introduction -->
+<section class="intro-section">
+    <div class="container">
+        <h1 class="title">Les innovations pour sauver les océans</h1>
+        <p class="description">
+            Des solutions novatrices émergent pour restaurer la santé des océans, allant des technologies de nettoyage au développement de navires écologiques.
+            Tout comme les traitements médicaux réparent un cœur malade, ces innovations travaillent à "soigner" les océans.
+        </p>
+    </div>
+</section>
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-{% endblock %}
-{% block body %}
-    <header>
-        <h1>Et si l'océan était un corps humain ?</h1>
-        <p>Explorez les parallèles fascinants entre les systèmes océaniques et le corps humain.</p>
-    </header>
-    {% include 'index/navigation.html.twig' %}
-    <main id="ocean">
-        {% block content %}
-                <section>
-                    <h2>Thématique 1 : L’Océan, le Cœur Battant de la Planète</h2>
-                    <p>Découvrez comment les courants marins fonctionnent comme le système circulatoire du corps humain, distribuant chaleur et nutriments à travers la planète.</p>
-                </section>
-                <section>
-                    <h2>Thématique 2 : Les Poumons Bleus de la Terre</h2>
-                    <p>Apprenez comment le phytoplancton joue un rôle essentiel dans la production d’oxygène, tout comme les poumons filtrent l'air pour fournir l’oxygène nécessaire au corps humain.</p>
-                </section>
-                <section>
-                    <h2>Thématique 3 : L’Océan en Santé : Un Corps Menacé</h2>
-                    <p>Examinez les menaces telles que la pollution et le réchauffement climatique qui affectent l'équilibre océanique et, par conséquent, l'équilibre climatique global.</p>
-                </section>
-                <section>
-                    <h2>Thématique 4 : Réparer le Cœur de la Planète</h2>
-                    <p>Découvrez les actions que nous pouvons entreprendre pour restaurer la santé des océans et préserver leur rôle essentiel dans notre survie.</p>
-                </section>
-        {% endblock %}
-    </main>
-    <footer>
-        <p>&copy; Nuit de l'Info 2024 - Créé avec passion pour sensibiliser sur l'importance des océans.</p>
-    </footer>
-    <script src="{{ asset('script/bull.js') }}"></script>
-{% endblock %}
+<!-- Bloc 2 : Exemples d'innovations -->
+<section class="innovations-section">
+    <div class="container">
+        <h2 class="subtitle">Technologies innovantes</h2>
+        <p class="description">
+            Des barrières anti-plastiques, des drones marins ou encore des systèmes de filtration pour les microplastiques montrent comment la science et la technologie peuvent nettoyer les "artères" océaniques.
+        </p>
+        <img src="https://www.techniques-ingenieur.fr/actualite/wp-content/uploads/2019/10/TheOceanCleanup.jpg" alt="Barrière anti-plastique" class="image">
+    </div>
+</section>
+
+<!-- Section : Le MODX 70 - Innovation et Écologie -->
+<section class="modx-section">
+    <div class="container">
+        <h1 class="title">Le MODX 70 - Innovation et Écologie</h1>
+        <p class="description">
+            Le MODX 70 est un catamaran révolutionnaire de 70 pieds qui redéfinit les normes du yachting durable.
+            Conçu pour être performant et respectueux de l’environnement, il symbolise l’avenir de la navigation.
+        </p>
+        <div class="features">
+            <div class="feature">
+                <h2 class="subtitle">Propulsion hybride</h2>
+                <p>
+                    Ce catamaran combine une propulsion par aile gonflable montée sur mât rétractable avec des moteurs
+                    électriques dotés d’un système d’hydrogénération. Résultat : une navigation silencieuse et sans
+                    énergies fossiles.
+                </p>
+            </div>
+            <div class="feature">
+                <h2 class="subtitle">Construction écoresponsable</h2>
+                <p>
+                    Sa structure intègre des matériaux biosourcés tels que la résine époxy biosourcée, les fibres de
+                    lin et la mousse PET recyclée. Cela réduit considérablement son empreinte écologique.
+                </p>
+            </div>
+            <div class="feature">
+                <h2 class="subtitle">Autonomie énergétique</h2>
+                <p>
+                    Grâce à des technologies avancées, le MODX 70 est entièrement autonome en énergie, éliminant ainsi
+                    le besoin de groupes électrogènes.
+                </p>
+            </div>
+        </div>
+        <div class="visuals">
+            <img src="https://modx-catamarans.com/wp-content/uploads/2022/08/eclate-3D-FR-9-scaled.jpg" alt="Catamaran MODX 70" class="image">
+        </div>
+        <div class="call-to-action">
+            <h2>Découvrez cette innovation</h2>
+            <p>
+                Le MODX 70 incarne une vision tournée vers l'avenir en alliant performance et écologie.
+                Cliquez ci-dessous pour en apprendre davantage et soutenir l'innovation durable.
+            </p>
+            <a href="https://modx-catamarans.com/modx-70/" target="_blank" class="cta-button">En savoir plus</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Bloc 3 : Appel à l’action -->
+<section class="call-to-action-section">
+    <div class="container">
+        <h2 class="cta-title">Rejoignez le mouvement</h2>
+        <p class="cta-description">
+            Ensemble, nous pouvons soutenir ces innovations en réduisant notre propre empreinte plastique et en encourageant l’utilisation de technologies écologiques.
+        </p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 - Nuit de l’Info | Projet : Et si l’océan était un corps humain ?</p>
+    </div>
+</footer>
+</body>
+</html>
