@@ -4,6 +4,8 @@ body {
     height: auto;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
+    background: linear-gradient(to bottom, #0077be, #000b10);
+    color: white;
 }
 
 /* Container central pour aligner le contenu */
