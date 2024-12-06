@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
 {% endblock %}
 {% block body %}
+    {% include 'index/navigation.html.twig' %}
     <header>
         <h1>Et si l'océan était un corps humain ?</h1>
         <p>Explorez les parallèles fascinants entre les systèmes océaniques et le corps humain.</p>
@@ -34,5 +35,4 @@
     <footer>
         <p>&copy; Nuit de l'Info 2024 - Créé avec passion pour sensibiliser sur l'importance des océans.</p>
     </footer>
-    <script src="{{ asset('script/index.js') }}"></script>
 {% endblock %}

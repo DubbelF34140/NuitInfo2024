@@ -16,6 +16,14 @@ class IndexController extends AbstractController
         ]);
     }
 
+    #[Route('/captchat', name: 'captchat')]
+    public function captchat(): Response
+    {
+        return $this->render('index/captchat.html.twig', [
+            'controller_name' => 'IndexController',
+        ]);
+    }
+
     #[Route('/theme1', name: 'theme1')]
     public function them1(): Response
     {
@@ -24,10 +32,17 @@ class IndexController extends AbstractController
         ]);
     }
 
+<<<<<<< HEAD
     #[Route('/theme2', name: 'theme2')]
     public function them2(): Response
     {
         return $this->render('article/theme2.html.twig', [
+=======
+    #[Route('/theme3', name: 'theme3')]
+    public function them3(): Response
+    {
+        return $this->render('article/theme3.html.twig', [
+>>>>>>> a0c0abf97eb11dc910fda638b4fb774d826b3a01
             'controller_name' => 'IndexController',
         ]);
     }
