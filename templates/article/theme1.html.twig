@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L’Océan, le Cœur Battant de la Planète</title>
-    <!-- Stylesheets -->
+    <script src="https://cdn.jsdelivr.net/npm/matter-js"></script>
     <link rel="stylesheet" href="{{ asset('styles/thematique1.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/bull.css') }}">
 </head>
-{% include 'index/navigation.html.twig' %}
 <body>
+{% include 'index/navigation.html.twig' %}
+
 <!-- Bloc 1 : Introduction -->
 <section class="intro-section">
     <div class="container">
@@ -70,9 +71,10 @@
             En comprenant le rôle vital des océans dans notre système planétaire, il devient clair que nous devons agir pour les protéger : limiter les émissions de CO₂, réduire les plastiques et promouvoir des solutions innovantes.
             Chaque action compte pour préserver la santé des océans et, par extension, celle de l'humanité.
         </p>
-        <a href="https://hyrome.paysdelaloire.e-lyco.fr/developpement-durable/protection-des-oceans/">
-            <button class="cta-button">Agir maintenant</button>
-        </a>
+            <iframe
+                    class="rope-container"
+                    src="/rope">
+            </iframe>
     </div>
 </section>
 
@@ -81,6 +83,7 @@
         <p>&copy; 2024 - Nuit de l’Info | Projet : Et si l’océan était un corps humain ?</p>
     </div>
 </footer>
+
 <script src="{{ asset('script/bull.js') }}"></script>
 </body>
 </html>

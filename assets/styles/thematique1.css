@@ -143,15 +143,69 @@ section {
     animation-delay: 2.5s;
 }
 
-.call-to-action-section .cta-button {
-    background: #00aaff;
-    color: #fff;
+.cta-button {
+    position: fixed; /* Permet au bouton de se déplacer librement */
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Assure qu'il reste au-dessus des autres éléments */
     padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    font-size: 1.2em;
-    animation: pulse 1.5s infinite;
+    transition: transform 0.2s ease, top 0.2s ease, left 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.rope-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: rgba(0, 119, 190, 0.1);
+    border: 1px solid #0077be;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9999;
+}
+
+svg#rope {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#handle {
+    fill: #FF5733;
+    stroke: #333;
+    stroke-width: 2;
+    cursor: pointer;
+}
+
+#loader {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background-color: #4CAF50;
+    transition: width 0.1s;
 }
 
 @keyframes pulse {
